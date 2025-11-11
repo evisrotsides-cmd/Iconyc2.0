@@ -48,7 +48,7 @@ function Footer() {
         <div>
           <p className="uppercase tracking-[0.25em] text-xs text-[#C9A968]">Contact</p>
           <p className="mt-2 flex items-center gap-2"><MapPin size={16}/> 32 Cloverdene Rd, Benoni</p>
-          <p className="mt-1 flex items-center gap-2"><Phone size={16}/> +27 79 288 0431</p>
+          <p className="mt-1 flex items-center gap-2"><Phone size={16}/> +27 61 179 093</p>
           <p className="mt-1 flex items-center gap-2"><Mail size={16}/> info@theiconyc.co.za</p>
         </div>
         <div>
@@ -79,7 +79,7 @@ function Welcome() {
         allow="autoplay; fullscreen; picture-in-picture"
         allowFullScreen
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220]/80 via-[#0B1220]/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220]/70 via-[#0B1220]/30 to-transparent" />
       <div className="relative text-center px-6">
         <h1 className="font-serif text-5xl md:text-7xl text-white mb-4">Welcome to ICONYC</h1>
         <p className="text-[#C9A968] text-lg md:text-xl">A new standard of luxury living</p>
