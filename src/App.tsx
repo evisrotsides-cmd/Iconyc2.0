@@ -101,7 +101,7 @@ function Welcome() {
     <section className="relative isolate h-[80vh] flex items-end justify-center bg-black pb-20">
       <iframe
         className="absolute inset-0 w-full h-full"
-        src="https://www.youtube.com/embed/Y2w8xG6KO5s?autoplay=1&loop=1&playlist=Y2w8xG6KO5s"
+        src="https://www.youtube.com/embed/Y2w8xG6KO5s?autoplay=1&mute=1&loop=1&playlist=Y2w8xG6KO5s"
         title="ICONYC Intro Video"
         frameBorder={0}
         allow="autoplay; fullscreen; picture-in-picture"
