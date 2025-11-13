@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, NavLink } from 'react-router-dom';
-import { MapPin, Phone, Mail, X } from 'lucide-react';
+import { MapPin, Phone, Mail, X, Menu } from 'lucide-react';
 
 // =========================
 // Header, Nav, Footer Shell
 // =========================
 function Shell({ children }: { children: React.ReactNode }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-[#0B1220] text-white selection:bg-[#C9A968] selection:text-[#0B1220]">
       <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-[#0B1220]/70 border-b border-white/10">
@@ -22,8 +24,34 @@ function Shell({ children }: { children: React.ReactNode }) {
               <Nav to="/gallery" label="Gallery" />
               <Nav to="/contact" label="Contact" />
             </div>
+            <div className="md:hidden">
+              <button onClick={() => setIsMenuOpen(true)} aria-label="Open menu">
+                <Menu size={24} />
+              </button>
+            </div>
           </div>
         </nav>
+
+        {isMenuOpen && (
+          <div className="fixed inset-0 z-50 bg-[#0B1220] md:hidden">
+            <div className="flex justify-between items-center h-16 px-4 md:px-6 border-b border-white/10">
+              <Link to="/" className="flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
+                <img src="https://i.postimg.cc/k50YzgKs/Chrome-Text.png" alt="ICONYC Logo" className="h-8" />
+              </Link>
+              <button onClick={() => setIsMenuOpen(false)} aria-label="Close menu">
+                <X size={24} />
+              </button>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-8 pt-20 text-lg">
+              <Nav onClick={() => setIsMenuOpen(false)} to="/" label="Welcome" />
+              <Nav onClick={() => setIsMenuOpen(false)} to="/living" label="Iconyc Living" />
+              <Nav onClick={() => setIsMenuOpen(false)} to="/availability" label="Availability" />
+              <Nav onClick={() => setIsMenuOpen(false)} to="/lifestyle" label="Lifestyle" />
+              <Nav onClick={() => setIsMenuOpen(false)} to="/gallery" label="Gallery" />
+              <Nav onClick={() => setIsMenuOpen(false)} to="/contact" label="Contact" />
+            </div>
+          </div>
+        )}
       </header>
       <main>{children}</main>
       <Footer />
@@ -31,9 +59,9 @@ function Shell({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Nav({ to, label }: { to: string; label: string }) {
+function Nav({ to, label, onClick }: { to: string; label: string; onClick?: () => void }) {
   return (
-    <NavLink to={to} className={({ isActive }) => `hover:text-white transition ${isActive ? 'text-[#C9A968]' : 'text-white/80'}`}>{label}</NavLink>
+    <NavLink to={to} onClick={onClick} className={({ isActive }) => `hover:text-white transition ${isActive ? 'text-[#C9A968]' : 'text-white/80'}`}>{label}</NavLink>
   );
 }
 
@@ -73,7 +101,7 @@ function Welcome() {
     <section className="relative isolate h-[80vh] flex items-end justify-center bg-black pb-20">
       <iframe
         className="absolute inset-0 w-full h-full"
-        src="https://www.youtube.com/embed/Y2w8xG6KO5s?autoplay=1&mute=1&loop=1&playlist=Y2w8xG6KO5s"
+        src="https://www.youtube.com/embed/Y2w8xG6KO5s?autoplay=1&loop=1&playlist=Y2w8xG6KO5s"
         title="ICONYC Intro Video"
         frameBorder={0}
         allow="autoplay; fullscreen; picture-in-picture"
