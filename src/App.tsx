@@ -170,16 +170,17 @@ function Availability() {
     return () => clearInterval(id);
   }, []);
 
-  const d12Images = [
-    'https://i.postimg.cc/FHkRy1cv/D12-1.jpg',
-    'https://i.postimg.cc/P5vxWNZn/D12-2.jpg',
-    'https://i.postimg.cc/0yKQYrmx/D12-3.jpg',
-    'https://i.postimg.cc/Vk06q5My/D12-4.jpg',
-    'https://i.postimg.cc/JzHnNtJr/D12-5.jpg',
+  const a13Images = [
+    'https://i.postimg.cc/43cxY2SD/A117.png',
+    'https://i.postimg.cc/3wGxkfq5/A13.png',
+    'https://i.postimg.cc/3wGxkfqM/A131.png',
+    'https://i.postimg.cc/yNR8DpGC/A134.png',
+    'https://i.postimg.cc/nLmhXSWC/A135.png',
+    'https://i.postimg.cc/d0CVhNf3/A136.png',
   ];
-  const [d12Slide, setD12Slide] = useState(0);
+  const [a13Slide, setA13Slide] = useState(0);
   useEffect(() => {
-    const id = setInterval(() => setD12Slide((s) => (s + 1) % d12Images.length), 3000);
+    const id = setInterval(() => setA13Slide((s) => (s + 1) % a13Images.length), 3000);
     return () => clearInterval(id);
   }, []);
 
@@ -215,16 +216,16 @@ function Availability() {
 
           <Link to="/contact" className="group rounded-2xl border border-white/10 overflow-hidden bg-white/5 hover:border-[#C9A968]/50 transition">
             <div className="aspect-[4/3] w-full overflow-hidden">
-              <img src={d12Images[d12Slide]} alt="Unit D12" className="w-full h-full object-cover group-hover:scale-[1.02] transition" />
+              <img src={a13Images[a13Slide]} alt="Unit A13" className="w-full h-full object-cover group-hover:scale-[1.02] transition" />
             </div>
             <div className="p-4">
               <div className="flex items-start justify-between gap-2">
-                <h3 className="font-serif text-xl">Unit D12 — 3 Bedroom</h3>
+                <h3 className="font-serif text-xl">Unit A13 — 3 Bedroom</h3>
                 <div className="flex gap-2">
                   <span className="text-[10px] px-2 py-1 rounded-full border border-white/15">Unfurnished</span>
                 </div>
               </div>
-              <p className="mt-1 text-white/70 text-xs">Level 2 • Interior 128 m² • Balcony 26 m²</p>
+              <p className="mt-1 text-white/70 text-xs">Ground floor • 152 m²</p>
               <p className="mt-1 text-white/70 text-xs italic">Note: This apartment is not furnished.</p>
               <div className="mt-3 flex items-center justify-between">
                 <span className="text-[#C9A968] text-sm">Photos rotate automatically</span>
