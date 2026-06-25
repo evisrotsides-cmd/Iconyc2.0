@@ -184,6 +184,21 @@ function Availability() {
     return () => clearInterval(id);
   }, []);
 
+  const c11Images = [
+    'https://i.postimg.cc/J0c44yGy/C112.png',
+    'https://i.postimg.cc/qqXMMtzN/C11.png',
+    'https://i.postimg.cc/6qL557yT/C113.png',
+    'https://i.postimg.cc/sx9DDBvZ/C114.png',
+    'https://i.postimg.cc/7PgLNRX1/C115.png',
+    'https://i.postimg.cc/8khCbYwm/C117.png',
+    'https://i.postimg.cc/4ybNNKmx/C11g.png',
+  ];
+  const [c11Slide, setC11Slide] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setC11Slide((s) => (s + 1) % c11Images.length), 3000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section className="mx-auto max-w-7xl px-4 md:px-6 py-16">
       <h2 className="font-serif text-5xl mb-8 text-center">Current Availability</h2>
@@ -226,6 +241,26 @@ function Availability() {
                 </div>
               </div>
               <p className="mt-1 text-white/70 text-xs">Ground floor • 152 m²</p>
+              <p className="mt-1 text-white/70 text-xs italic">Note: This apartment is not furnished.</p>
+              <div className="mt-3 flex items-center justify-between">
+                <span className="text-[#C9A968] text-sm">Photos rotate automatically</span>
+                <span className="text-xs opacity-70">Tap to enquire</span>
+              </div>
+            </div>
+          </Link>
+
+          <Link to="/contact" className="group rounded-2xl border border-white/10 overflow-hidden bg-white/5 hover:border-[#C9A968]/50 transition">
+            <div className="aspect-[4/3] w-full overflow-hidden">
+              <img src={c11Images[c11Slide]} alt="Unit C11" className="w-full h-full object-cover group-hover:scale-[1.02] transition" />
+            </div>
+            <div className="p-4">
+              <div className="flex items-start justify-between gap-2">
+                <h3 className="font-serif text-xl">Unit C11 — 2 Bedroom</h3>
+                <div className="flex gap-2">
+                  <span className="text-[10px] px-2 py-1 rounded-full border border-white/15">Unfurnished</span>
+                </div>
+              </div>
+              <p className="mt-1 text-white/70 text-xs">Level 3 • Interior 115 m² • Balcony 9 m²</p>
               <p className="mt-1 text-white/70 text-xs italic">Note: This apartment is not furnished.</p>
               <div className="mt-3 flex items-center justify-between">
                 <span className="text-[#C9A968] text-sm">Photos rotate automatically</span>
