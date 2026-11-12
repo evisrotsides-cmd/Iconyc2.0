@@ -13,37 +13,37 @@ const pages = {
   home: {
     title: 'ICONYC | Luxury Apartments & Corporate Stays in Benoni',
     description:
-      'Furnished corporate apartments in Rynfield, Benoni, overlooking Ebotse Links and CR Swart Dam. Stays of 1 to 6 months from R32 000 a month.',
+      'Furnished 2-bedroom apartments for corporate stays of 1 to 6 months in Rynfield, Benoni, overlooking Ebotse Links and CR Swart Dam. From R32 000 a month.',
     path: '/',
   },
   living: {
     title: 'ICONYC Living | Luxury Residences in Rynfield, Benoni',
     description:
-      'Contemporary ICONYC residences with a New York signature above Ebotse Golf & Country Estate in Rynfield, Benoni, with views over CR Swart Dam.',
+      'Contemporary 2-bedroom ICONYC residences with a New York signature above Ebotse Golf & Country Estate in Rynfield, Benoni, with views over CR Swart Dam.',
     path: '/living',
   },
   corporate: {
     title: 'ICONYC Corporate Stays | Furnished Apartments in Benoni',
     description:
-      'Four fully furnished ICONYC apartments for corporate stays of 1 to 6 months in Benoni. From R32 000 single or R38 000 double per month, housekeeping included.',
+      'Four fully furnished 2-bedroom ICONYC apartments for corporate stays of 1 to 6 months in Benoni. From R32 000 single or R38 000 double per month. Electricity, water and Wi-Fi included.',
     path: '/corporate-stays',
   },
   availability: {
     title: 'ICONYC Availability | Apartments for Rent in Benoni',
     description:
-      'ICONYC apartments available to rent in Benoni, including furnished, unfurnished and corporate stays from R32 000 single / R38 000 double per month.',
+      '2-bedroom ICONYC apartments to rent in Benoni. A furnished home is a 12-month lease, or a corporate stay of 1 to 6 months from R32 000 single / R38 000 double per month.',
     path: '/availability',
   },
   lifestyle: {
     title: 'ICONYC Lifestyle | Pool, Gym and Ebotse Links Views',
     description:
-      'Pool, gym, beach volleyball and parkland at ICONYC in Rynfield, Benoni, with fibre internet, 24-hour security and views over Ebotse Links.',
+      'Pool, gym, beach volleyball and parkland at ICONYC’s 2-bedroom residences in Rynfield, Benoni, with fibre internet, 24-hour security and views over Ebotse Links.',
     path: '/lifestyle',
   },
   gallery: {
     title: 'ICONYC Gallery | Residences Overlooking Ebotse Links',
     description:
-      'Photographs of ICONYC residences and the estate in Rynfield, Benoni, overlooking the Ebotse Links golf course and CR Swart Dam.',
+      'Photographs of ICONYC’s 2-bedroom residences and the estate in Rynfield, Benoni, overlooking the Ebotse Links golf course and CR Swart Dam.',
     path: '/gallery',
   },
   contact: {
@@ -309,7 +309,7 @@ function Welcome() {
           New York–inspired residences above Ebotse Links
         </h1>
         <p className="mt-4 max-w-2xl text-pretty text-base leading-relaxed text-white/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)] md:text-lg">
-          Fully furnished apartments for corporate stays of 1 to 6 months, overlooking the golf course and CR Swart Dam. Housekeeping, utilities and high-speed Wi-Fi included.
+          Fully furnished 2-bedroom apartments for corporate stays of 1 to 6 months, overlooking the golf course and CR Swart Dam. Housekeeping, electricity, water and high-speed Wi-Fi included.
         </p>
         <div className="mt-8 flex w-full flex-col items-stretch justify-center gap-3 sm:w-auto sm:flex-row">
           <GoldButton href="/corporate-stays">Enquire about a corporate stay</GoldButton>
@@ -317,7 +317,7 @@ function Welcome() {
         </div>
       </div>
       <div className="relative z-10 border-t border-white/15 bg-[#0B1220]/85 px-4 py-3 text-center text-xs leading-relaxed text-white/85 backdrop-blur md:text-sm">
-        Corporate stays: From R32 000 / month · Included: Housekeeping, utilities, Wi-Fi · Lifestyle: Pool, gym, beach volleyball
+        Corporate stays: From R32 000 / month · Included: Housekeeping, electricity, water, Wi-Fi · Lifestyle: Pool, gym, beach volleyball
       </div>
     </section>
   );
@@ -344,7 +344,7 @@ function Living() {
       <p className="text-white/80 leading-relaxed mb-6">It is a vantage point few will ever own — and even fewer will ever experience.</p>
 
       <h2 className="text-[#C9A968] text-xl mt-10 mb-4 font-semibold">Fully Sold Out — With Only a Handful Left to Rent</h2>
-      <p className="text-white/80 leading-relaxed mb-6">Every ICONYC residence has now been fully sold, confirming its position as one of the most desirable luxury developments in the city. Our 3-bedroom and 4-bedroom residences are on a waitlist exceeding 12 months, with no near-term release of new inventory.</p>
+      <p className="text-white/80 leading-relaxed mb-6">Every ICONYC residence has now been fully sold, confirming its position as one of the most desirable luxury developments in the city. The residences are 2-bedroom homes.</p>
 
       <p className="text-white/80 leading-relaxed mb-6">Only a very limited number of units are available for rent, offering a rare chance to live at ICONYC without having to wait for the next phase of ownership.</p>
 
@@ -369,15 +369,6 @@ const a8Images: Photo[] = [
   { src: '/images/availability/a8-7.webp', width: 1200, height: 675, alt: 'Unit A8 at ICONYC' },
 ];
 
-const a13Images: Photo[] = [
-  { src: '/images/availability/a13-1.webp', width: 1200, height: 676, alt: 'Unit A13 at ICONYC' },
-  { src: '/images/availability/a13-2.webp', width: 1200, height: 676, alt: 'Unit A13 at ICONYC' },
-  { src: '/images/availability/a13-3.webp', width: 1200, height: 676, alt: 'Unit A13 at ICONYC' },
-  { src: '/images/availability/a13-4.webp', width: 1200, height: 676, alt: 'Unit A13 at ICONYC' },
-  { src: '/images/availability/a13-5.webp', width: 1200, height: 799, alt: 'Unit A13 at ICONYC' },
-  { src: '/images/availability/a13-6.webp', width: 1200, height: 799, alt: 'Unit A13 at ICONYC' },
-];
-
 const c11Images: Photo[] = [
   { src: '/images/availability/c11-2.webp', width: 1200, height: 676, alt: 'Unit C11 at ICONYC' },
   { src: '/images/availability/c11-1.webp', width: 1200, height: 681, alt: 'Unit C11 at ICONYC' },
@@ -399,12 +390,6 @@ function Availability() {
     return () => clearInterval(id);
   }, []);
 
-  const [a13Slide, setA13Slide] = useState(0);
-  useEffect(() => {
-    const id = setInterval(() => setA13Slide((s) => (s + 1) % a13Images.length), 3000);
-    return () => clearInterval(id);
-  }, []);
-
   const [c11Slide, setC11Slide] = useState(0);
   useEffect(() => {
     const id = setInterval(() => setC11Slide((s) => (s + 1) % c11Images.length), 3000);
@@ -415,11 +400,11 @@ function Availability() {
     <section className="mx-auto max-w-7xl px-4 md:px-6 py-16">
       <h1 className="font-serif text-5xl mb-8 text-center">Current Availability</h1>
 
-      <p className="text-white/80 leading-relaxed mb-6">Each apartment has its own unique footprint and design with options for <span className="text-[#C9A968] font-medium">Furnished</span>, <span className="text-[#C9A968] font-medium">Semi-Furnished</span>, and <span className="text-[#C9A968] font-medium">Corporate Rental</span>.</p>
+      <p className="text-white/80 leading-relaxed mb-6">The apartments available now are 2-bedroom. Semi-furnished and unfurnished rentals are listed below. A furnished apartment is rented on a 12-month lease, or for 1 to 6 months as a corporate stay. A furnished unit rented for less than 12 months becomes a corporate stay, and electricity, water and Wi-Fi are included in that monthly rate. One parking bay is included with every rental.</p>
 
       <div className="mb-10">
         <p className="uppercase tracking-[0.25em] text-xs text-[#C9A968] mb-3">Available now</p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 gap-6">
           <Link to="/contact" className="group rounded-2xl border border-white/10 overflow-hidden bg-white/5 hover:border-[#C9A968]/50 transition">
             <div className="aspect-[4/3] w-full overflow-hidden">
               <Img {...a8Images[a8Slide]} className="w-full h-full object-cover group-hover:scale-[1.02] transition" />
@@ -429,30 +414,10 @@ function Availability() {
                 <h2 className="font-serif text-xl">Unit A8 — 2 Bedroom</h2>
                 <div className="flex gap-2">
                   <span className="text-[10px] px-2 py-1 rounded-full border border-white/15">Furnished</span>
-                  <span className="text-[10px] px-2 py-1 rounded-full border border-white/15">Corporate Rental</span>
                 </div>
               </div>
               <p className="mt-1 text-white/70 text-xs">Ground floor • Interior 118 m² • Exterior 34 m²</p>
-              <div className="mt-3 flex items-center justify-between">
-                <span className="text-[#C9A968] text-sm">Photos rotate automatically</span>
-                <span className="text-xs opacity-70">Tap to enquire</span>
-              </div>
-            </div>
-          </Link>
-
-          <Link to="/contact" className="group rounded-2xl border border-white/10 overflow-hidden bg-white/5 hover:border-[#C9A968]/50 transition">
-            <div className="aspect-[4/3] w-full overflow-hidden">
-              <Img {...a13Images[a13Slide]} className="w-full h-full object-cover group-hover:scale-[1.02] transition" />
-            </div>
-            <div className="p-4">
-              <div className="flex items-start justify-between gap-2">
-                <h2 className="font-serif text-xl">Unit A13 — 3 Bedroom</h2>
-                <div className="flex gap-2">
-                  <span className="text-[10px] px-2 py-1 rounded-full border border-white/15">Unfurnished</span>
-                </div>
-              </div>
-              <p className="mt-1 text-white/70 text-xs">Ground floor • 152 m²</p>
-              <p className="mt-1 text-white/70 text-xs italic">Note: This apartment is not furnished.</p>
+              <p className="mt-1 text-white/70 text-xs">12-month lease, or a corporate stay of 1 to 6 months. One parking bay included.</p>
               <div className="mt-3 flex items-center justify-between">
                 <span className="text-[#C9A968] text-sm">Photos rotate automatically</span>
                 <span className="text-xs opacity-70">Tap to enquire</span>
@@ -472,7 +437,7 @@ function Availability() {
                 </div>
               </div>
               <p className="mt-1 text-white/70 text-xs">Level 3 • Interior 115 m² • Balcony 9 m²</p>
-              <p className="mt-1 text-white/70 text-xs italic">Note: This apartment is not furnished.</p>
+              <p className="mt-1 text-white/70 text-xs italic">Note: This apartment is not furnished. One parking bay included.</p>
               <div className="mt-3 flex items-center justify-between">
                 <span className="text-[#C9A968] text-sm">Photos rotate automatically</span>
                 <span className="text-xs opacity-70">Tap to enquire</span>
@@ -488,8 +453,8 @@ function Availability() {
             <tr>
               <th className="p-2 border-b border-white/10">Features</th>
               <th className="p-2 border-b border-white/10">Semi-Furnished (from R15 000)</th>
-              <th className="p-2 border-b border-white/10">Furnished (from R24 000)</th>
-              <th className="p-2 border-b border-white/10 whitespace-normal min-w-[16rem]">Corporate Rental (from R32 000 single / R38 000 double per month)</th>
+              <th className="p-2 border-b border-white/10 whitespace-normal min-w-[12rem]">Furnished — 12-month lease (from R24 000)</th>
+              <th className="p-2 border-b border-white/10 whitespace-normal min-w-[16rem]">Corporate stay — furnished, 1 to 6 months (from R32 000 single / R38 000 double per month)</th>
             </tr>
           </thead>
           <tbody>
@@ -514,11 +479,11 @@ function Availability() {
               ['Kitchenware','❌ Not included','❌ Not included','✔️ Full set (plates, utensils, cookware)'],
               ['TV / Entertainment','❌ Not included','❌ Not included','✔️ Included'],
               ['Internet','❌ Not included','❌ Not included','✔️ High-speed Wi-Fi'],
-              ['Utilities','✔️ Included','✔️ Included','✔️ Included (fair usage applies)'],
+              ['Utilities','✔️ Included','✔️ Included','✔️ Electricity, water and Wi-Fi included'],
               ['Bedding & Linens','❌ Not included','❌ Not included','✔️ Included & changed weekly'],
               ['Housekeeping','❌ Not included','❌ Not included','✔️ Weekly'],
               ['Ready to Move In?','❌ Not fully','✔️ Yes','✔️ Yes — hotel-style setup'],
-              ['Basement Parking','❌ Not included','❌ Not included','❌ Not included'],
+              ['Parking','✔️ One bay included','✔️ One bay included','✔️ One bay included'],
             ].map((row, i) => (
               <tr key={i} className="even:bg-white/5">
                 {row.map((cell, j) => (
@@ -570,7 +535,7 @@ function Lifestyle() {
       <p className="text-white/80 leading-relaxed mb-6">To complement this relaxed outdoor lifestyle, ICONYC also features designer Barbecue & Braai Facilities, seamlessly integrated into landscaped entertainment areas. Whether hosting a sunset gathering with friends or a family weekend lunch, the outdoor braai zones are crafted for connection, comfort, and style — offering the perfect balance of luxury and leisure.</p>
 
       <h2 className="text-[#C9A968] text-xl mt-10 mb-4 font-semibold">SECURE PARKING FOR RESIDENTS & GUESTS</h2>
-      <p className="text-white/80 leading-relaxed mb-6">Each residence includes two allocated parking bays — one covered basement bay and one ground-level bay. Additional visitor parking ensures effortless hosting and stress-free arrivals.</p>
+      <p className="text-white/80 leading-relaxed mb-6">One parking bay included with every rental. Visitor parking is available for guests.</p>
 
       <p className="text-center text-[#C9A968] text-xl font-serif mt-10">ICONYC — A NEW STANDARD OF MODERN LIVING</p>
 
@@ -691,12 +656,12 @@ function Contact() {
 }
 
 const included = [
-  'Fully furnished apartment',
+  'Fully furnished 2-bedroom apartment',
   'Weekly housekeeping',
   '24/7 maintenance',
-  'High-speed internet',
+  'Electricity, water and Wi-Fi included in the monthly rate',
   'Smart TVs',
-  'Utilities included, with no hidden fees',
+  'One parking bay',
   'Swimming pool',
   'Beach volleyball',
   'Gym',
@@ -712,7 +677,7 @@ const audiences = [
 ];
 
 const reasons = [
-  { title: 'One monthly price', body: 'One monthly price invoiced to your company.' },
+  { title: 'One monthly price', body: 'One monthly price invoiced to your company, with electricity, water and Wi-Fi included.' },
   { title: 'A real home', body: 'A real home with a full kitchen.' },
   { title: 'Life on the estate', body: 'Pool, gym, beach volleyball and park.' },
   { title: 'Flexible terms', body: 'Flexible 1 to 6 month terms.' },
@@ -721,7 +686,7 @@ const reasons = [
 const faqs = [
   {
     q: 'How long is a corporate stay?',
-    a: 'The minimum stay is 1 month, and stays run up to 6 months. Extensions are subject to availability.',
+    a: 'The minimum stay is 1 month, and stays run up to 6 months. A furnished apartment rented for less than 12 months is a corporate stay. Extensions are subject to availability.',
   },
   {
     q: 'Can you invoice our company?',
@@ -729,15 +694,15 @@ const faqs = [
   },
   {
     q: 'What is included?',
-    a: 'Weekly housekeeping, 24/7 maintenance, high-speed internet, smart TVs and utilities. The apartments are fully furnished. Residents can use the swimming pool, beach volleyball court, gym and large park.',
+    a: 'A fully furnished 2-bedroom apartment, weekly housekeeping, 24/7 maintenance and smart TVs. Electricity, water and Wi-Fi are included in the monthly rate, and corporate tenants do not pay for them. One parking bay is included. Residents can use the swimming pool, beach volleyball court, gym and large park. There are no hidden fees.',
   },
   {
     q: 'Are there hidden fees?',
-    a: 'There are no hidden fees. The deposit and the terms of the stay are set out in a short corporate stay agreement.',
+    a: 'There are no hidden fees. Electricity, water and Wi-Fi are included in the monthly rate. The deposit and the terms of the stay are set out in a short corporate stay agreement.',
   },
   {
     q: 'How many apartments are available?',
-    a: 'There are 4 fully furnished corporate apartments. Small teams are welcome.',
+    a: 'There are 4 fully furnished 2-bedroom apartments for corporate stays. Small teams are welcome.',
   },
   {
     q: 'Can we arrange a viewing?',
@@ -758,14 +723,14 @@ function CorporateStays() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220] via-[#0B1220]/50 to-black/25" />
         <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-16 md:px-6 md:py-20">
           <p className="text-xs uppercase tracking-[0.28em] text-[#C9A968]">ICONYC · Corporate stays</p>
-          <h1 className="mt-4 max-w-3xl font-serif text-4xl leading-[1.1] md:text-6xl">Fully furnished apartments for stays of 1 to 6 months</h1>
+          <h1 className="mt-4 max-w-3xl font-serif text-4xl leading-[1.1] md:text-6xl">Fully furnished 2-bedroom apartments for stays of 1 to 6 months</h1>
           <p className="mt-4 max-w-2xl text-white/85">from R32 000 single / R38 000 double per month</p>
         </div>
       </section>
 
       <section className="mx-auto max-w-3xl px-4 py-16 md:px-6">
         <p className="text-lg leading-relaxed text-white/85">
-          Contemporary residences with a New York signature, overlooking Ebotse Links and CR Swart Dam in Rynfield, Benoni. ICONYC offers fully furnished apartments for corporate stays of one to six months: a private, calm home base for specialists, project teams, visiting clinicians and relocating staff working on the East Rand.
+          Contemporary residences with a New York signature, overlooking Ebotse Links and CR Swart Dam in Rynfield, Benoni. ICONYC’s homes are 2-bedroom. A furnished apartment can be rented on a 12-month lease, or for one to six months as a corporate stay. A furnished unit rented for less than 12 months becomes a corporate stay: a private, calm home base for specialists, project teams, visiting clinicians and relocating staff working on the East Rand. Electricity, water and Wi-Fi are included in the monthly rate, and corporate tenants do not pay for them. One parking bay is included with every rental.
         </p>
       </section>
 
@@ -823,7 +788,7 @@ function CorporateStays() {
               </tbody>
             </table>
           </div>
-          <p className="mt-4 text-sm text-white/70">Utilities, Wi-Fi and weekly housekeeping are included. Terms and conditions apply.</p>
+          <p className="mt-4 text-sm text-white/70">Electricity, water and Wi-Fi are included in the monthly rate. Corporate tenants do not pay for them. Weekly housekeeping and one parking bay are included. Terms and conditions apply.</p>
         </div>
       </section>
 
