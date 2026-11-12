@@ -359,6 +359,14 @@ function Living() {
   );
 }
 
+const a11Images: Photo[] = [
+  { src: '/images/availability/a11-1.webp', width: 1200, height: 675, alt: 'Kitchen with an island bar in unit A11 at ICONYC' },
+  { src: '/images/availability/a11-2.webp', width: 1200, height: 675, alt: 'Kitchen and living area with a brick wall and sliding doors in unit A11 at ICONYC' },
+  { src: '/images/availability/a11-3.webp', width: 1200, height: 675, alt: 'Bedroom with a wardrobe and en-suite in unit A11 at ICONYC' },
+  { src: '/images/availability/a11-4.webp', width: 1200, height: 799, alt: 'Bedroom with a wardrobe and window in unit A11 at ICONYC' },
+  { src: '/images/availability/a11-5.webp', width: 1200, height: 799, alt: 'Bedroom with a wardrobe and laminate floor in unit A11 at ICONYC' },
+];
+
 const b10Images: Photo[] = [
   { src: '/images/availability/b10-2.webp', width: 1200, height: 675, alt: 'Unit B10 at ICONYC' },
   { src: '/images/availability/b10-1.webp', width: 1200, height: 675, alt: 'Unit B10 at ICONYC' },
@@ -382,6 +390,12 @@ const d4Images: Photo[] = [
 // =========================
 function Availability() {
   usePageMeta(pages.availability);
+  const [a11Slide, setA11Slide] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setA11Slide((s) => (s + 1) % a11Images.length), 3000);
+    return () => clearInterval(id);
+  }, []);
+
   const [b10Slide, setB10Slide] = useState(0);
   useEffect(() => {
     const id = setInterval(() => setB10Slide((s) => (s + 1) % b10Images.length), 3000);
@@ -404,9 +418,8 @@ function Availability() {
         <p className="uppercase tracking-[0.25em] text-xs text-[#C9A968] mb-3">Available now</p>
         <div className="grid sm:grid-cols-2 gap-6">
           <Link to="/contact" className="group rounded-2xl border border-white/10 overflow-hidden bg-white/5 hover:border-[#C9A968]/50 transition">
-            <div className="flex aspect-[4/3] w-full flex-col items-center justify-center gap-3 border-b border-white/10 bg-black/40 px-6 text-center">
-              <p className="font-serif text-4xl text-[#C9A968]">A11</p>
-              <p className="text-xs uppercase tracking-[0.25em] text-white/70">Photos coming soon</p>
+            <div className="aspect-[4/3] w-full overflow-hidden">
+              <Img {...a11Images[a11Slide]} className="w-full h-full object-cover group-hover:scale-[1.02] transition" />
             </div>
             <div className="p-4">
               <div className="flex items-start justify-between gap-2">
@@ -418,7 +431,8 @@ function Availability() {
               <p className="mt-1 text-white/70 text-xs">Interior 106 m² • Exterior 32 m² • Total 138 m²</p>
               <p className="mt-1 text-[#C9A968] text-sm">R15 500 per month</p>
               <p className="mt-1 text-white/70 text-xs italic">Note: This apartment is not furnished. One parking bay included.</p>
-              <div className="mt-3 flex items-center justify-end">
+              <div className="mt-3 flex items-center justify-between">
+                <span className="text-[#C9A968] text-sm">Photos rotate automatically</span>
                 <span className="text-xs opacity-70">Tap to enquire</span>
               </div>
             </div>
