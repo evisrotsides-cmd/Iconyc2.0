@@ -343,10 +343,8 @@ function Living() {
 
       <p className="text-white/80 leading-relaxed mb-6">It is a vantage point few will ever own — and even fewer will ever experience.</p>
 
-      <h2 className="text-[#C9A968] text-xl mt-10 mb-4 font-semibold">Fully Sold Out — With Only a Handful Left to Rent</h2>
-      <p className="text-white/80 leading-relaxed mb-6">Every ICONYC residence has now been fully sold, confirming its position as one of the most desirable luxury developments in the city. The residences are 2-bedroom homes.</p>
-
-      <p className="text-white/80 leading-relaxed mb-6">Only a very limited number of units are available for rent, offering a rare chance to live at ICONYC without having to wait for the next phase of ownership.</p>
+      <h2 className="text-[#C9A968] text-xl mt-10 mb-4 font-semibold">Available to Rent</h2>
+      <p className="text-white/80 leading-relaxed mb-6">ICONYC residences are 2-bedroom homes. Only a very limited number of units are available for rent, offering a rare chance to live at ICONYC.</p>
 
       <p className="text-center text-[#C9A968] text-xl font-serif mt-10">A Final Opportunity — Reserved for Those Who Move Quickly</p>
 
@@ -361,22 +359,22 @@ function Living() {
   );
 }
 
-const a8Images: Photo[] = [
-  { src: '/images/availability/a8-2.webp', width: 1200, height: 675, alt: 'Unit A8 at ICONYC' },
-  { src: '/images/availability/a8-1.webp', width: 1200, height: 675, alt: 'Unit A8 at ICONYC' },
-  { src: '/images/availability/a8-4.webp', width: 1200, height: 675, alt: 'Unit A8 at ICONYC' },
-  { src: '/images/availability/a8-5.webp', width: 1200, height: 675, alt: 'Unit A8 at ICONYC' },
-  { src: '/images/availability/a8-7.webp', width: 1200, height: 675, alt: 'Unit A8 at ICONYC' },
+const b10Images: Photo[] = [
+  { src: '/images/availability/b10-2.webp', width: 1200, height: 675, alt: 'Unit B10 at ICONYC' },
+  { src: '/images/availability/b10-1.webp', width: 1200, height: 675, alt: 'Unit B10 at ICONYC' },
+  { src: '/images/availability/b10-4.webp', width: 1200, height: 675, alt: 'Unit B10 at ICONYC' },
+  { src: '/images/availability/b10-5.webp', width: 1200, height: 675, alt: 'Unit B10 at ICONYC' },
+  { src: '/images/availability/b10-7.webp', width: 1200, height: 675, alt: 'Unit B10 at ICONYC' },
 ];
 
-const c11Images: Photo[] = [
-  { src: '/images/availability/c11-2.webp', width: 1200, height: 676, alt: 'Unit C11 at ICONYC' },
-  { src: '/images/availability/c11-1.webp', width: 1200, height: 681, alt: 'Unit C11 at ICONYC' },
-  { src: '/images/availability/c11-3.webp', width: 1200, height: 676, alt: 'Unit C11 at ICONYC' },
-  { src: '/images/availability/c11-4.webp', width: 1200, height: 676, alt: 'Unit C11 at ICONYC' },
-  { src: '/images/availability/c11-5.webp', width: 1200, height: 800, alt: 'Unit C11 at ICONYC' },
-  { src: '/images/availability/c11-6.webp', width: 1200, height: 800, alt: 'Unit C11 at ICONYC' },
-  { src: '/images/availability/c11-7.webp', width: 1200, height: 800, alt: 'Unit C11 at ICONYC' },
+const d4Images: Photo[] = [
+  { src: '/images/availability/d4-2.webp', width: 1200, height: 676, alt: 'Unit D4 at ICONYC' },
+  { src: '/images/availability/d4-1.webp', width: 1200, height: 681, alt: 'Unit D4 at ICONYC' },
+  { src: '/images/availability/d4-3.webp', width: 1200, height: 676, alt: 'Unit D4 at ICONYC' },
+  { src: '/images/availability/d4-4.webp', width: 1200, height: 676, alt: 'Unit D4 at ICONYC' },
+  { src: '/images/availability/d4-5.webp', width: 1200, height: 800, alt: 'Unit D4 at ICONYC' },
+  { src: '/images/availability/d4-6.webp', width: 1200, height: 800, alt: 'Unit D4 at ICONYC' },
+  { src: '/images/availability/d4-7.webp', width: 1200, height: 800, alt: 'Unit D4 at ICONYC' },
 ];
 
 // =========================
@@ -384,15 +382,15 @@ const c11Images: Photo[] = [
 // =========================
 function Availability() {
   usePageMeta(pages.availability);
-  const [a8Slide, setA8Slide] = useState(0);
+  const [b10Slide, setB10Slide] = useState(0);
   useEffect(() => {
-    const id = setInterval(() => setA8Slide((s) => (s + 1) % a8Images.length), 3000);
+    const id = setInterval(() => setB10Slide((s) => (s + 1) % b10Images.length), 3000);
     return () => clearInterval(id);
   }, []);
 
-  const [c11Slide, setC11Slide] = useState(0);
+  const [d4Slide, setD4Slide] = useState(0);
   useEffect(() => {
-    const id = setInterval(() => setC11Slide((s) => (s + 1) % c11Images.length), 3000);
+    const id = setInterval(() => setD4Slide((s) => (s + 1) % d4Images.length), 3000);
     return () => clearInterval(id);
   }, []);
 
@@ -407,16 +405,16 @@ function Availability() {
         <div className="grid sm:grid-cols-2 gap-6">
           <Link to="/contact" className="group rounded-2xl border border-white/10 overflow-hidden bg-white/5 hover:border-[#C9A968]/50 transition">
             <div className="aspect-[4/3] w-full overflow-hidden">
-              <Img {...a8Images[a8Slide]} className="w-full h-full object-cover group-hover:scale-[1.02] transition" />
+              <Img {...b10Images[b10Slide]} className="w-full h-full object-cover group-hover:scale-[1.02] transition" />
             </div>
             <div className="p-4">
               <div className="flex items-start justify-between gap-2">
-                <h2 className="font-serif text-xl">Unit A8 — 2 Bedroom</h2>
+                <h2 className="font-serif text-xl">Unit B10 — 2 Bedroom</h2>
                 <div className="flex gap-2">
                   <span className="text-[10px] px-2 py-1 rounded-full border border-white/15">Furnished</span>
                 </div>
               </div>
-              <p className="mt-1 text-white/70 text-xs">Ground floor • Interior 118 m² • Exterior 34 m²</p>
+              <p className="mt-1 text-white/70 text-xs">Ground floor • Interior 118 m² • Exterior 82 m²</p>
               <p className="mt-1 text-white/70 text-xs">12-month lease, or a corporate stay of 1 to 6 months. One parking bay included.</p>
               <div className="mt-3 flex items-center justify-between">
                 <span className="text-[#C9A968] text-sm">Photos rotate automatically</span>
@@ -427,11 +425,11 @@ function Availability() {
 
           <Link to="/contact" className="group rounded-2xl border border-white/10 overflow-hidden bg-white/5 hover:border-[#C9A968]/50 transition">
             <div className="aspect-[4/3] w-full overflow-hidden">
-              <Img {...c11Images[c11Slide]} className="w-full h-full object-cover group-hover:scale-[1.02] transition" />
+              <Img {...d4Images[d4Slide]} className="w-full h-full object-cover group-hover:scale-[1.02] transition" />
             </div>
             <div className="p-4">
               <div className="flex items-start justify-between gap-2">
-                <h2 className="font-serif text-xl">Unit C11 — 2 Bedroom</h2>
+                <h2 className="font-serif text-xl">Unit D4 — 2 Bedroom</h2>
                 <div className="flex gap-2">
                   <span className="text-[10px] px-2 py-1 rounded-full border border-white/15">Unfurnished</span>
                 </div>
