@@ -404,20 +404,42 @@ function Availability() {
         <p className="uppercase tracking-[0.25em] text-xs text-[#C9A968] mb-3">Available now</p>
         <div className="grid sm:grid-cols-2 gap-6">
           <Link to="/contact" className="group rounded-2xl border border-white/10 overflow-hidden bg-white/5 hover:border-[#C9A968]/50 transition">
-            <div className="aspect-[4/3] w-full overflow-hidden">
-              <Img {...b10Images[b10Slide]} className="w-full h-full object-cover group-hover:scale-[1.02] transition" />
+            <div className="flex aspect-[4/3] w-full flex-col items-center justify-center gap-3 border-b border-white/10 bg-black/40 px-6 text-center">
+              <p className="font-serif text-4xl text-[#C9A968]">A11</p>
+              <p className="text-xs uppercase tracking-[0.25em] text-white/70">Photos coming soon</p>
             </div>
             <div className="p-4">
               <div className="flex items-start justify-between gap-2">
-                <h2 className="font-serif text-xl">Unit B10 — 2 Bedroom</h2>
+                <h2 className="font-serif text-xl">Unit A11 — 2 Bedroom</h2>
                 <div className="flex gap-2">
-                  <span className="text-[10px] px-2 py-1 rounded-full border border-white/15">Furnished</span>
+                  <span className="text-[10px] px-2 py-1 rounded-full border border-white/15">Unfurnished</span>
                 </div>
               </div>
-              <p className="mt-1 text-white/70 text-xs">Ground floor • Interior 118 m² • Exterior 82 m²</p>
-              <p className="mt-1 text-white/70 text-xs">12-month lease, or a corporate stay of 1 to 6 months. One parking bay included.</p>
-              <div className="mt-3 flex items-center justify-between">
-                <span className="text-[#C9A968] text-sm">Photos rotate automatically</span>
+              <p className="mt-1 text-white/70 text-xs">Interior 106 m² • Exterior 32 m² • Total 138 m²</p>
+              <p className="mt-1 text-[#C9A968] text-sm">R15 500 per month</p>
+              <p className="mt-1 text-white/70 text-xs italic">Note: This apartment is not furnished. One parking bay included.</p>
+              <div className="mt-3 flex items-center justify-end">
+                <span className="text-xs opacity-70">Tap to enquire</span>
+              </div>
+            </div>
+          </Link>
+
+          <Link to="/contact" className="group rounded-2xl border border-white/10 overflow-hidden bg-white/5 hover:border-[#C9A968]/50 transition">
+            <div className="flex aspect-[4/3] w-full flex-col items-center justify-center gap-3 border-b border-white/10 bg-black/40 px-6 text-center">
+              <p className="font-serif text-4xl text-[#C9A968]">A12</p>
+              <p className="text-xs uppercase tracking-[0.25em] text-white/70">Photos coming soon</p>
+            </div>
+            <div className="p-4">
+              <div className="flex items-start justify-between gap-2">
+                <h2 className="font-serif text-xl">Unit A12 — 2 Bedroom</h2>
+                <div className="flex gap-2">
+                  <span className="text-[10px] px-2 py-1 rounded-full border border-white/15">Unfurnished</span>
+                </div>
+              </div>
+              <p className="mt-1 text-white/70 text-xs">Interior 124 m² • Exterior 38 m² • Total 162 m²</p>
+              <p className="mt-1 text-[#C9A968] text-sm">R18 000 per month</p>
+              <p className="mt-1 text-white/70 text-xs italic">Note: This apartment is not furnished. One parking bay included.</p>
+              <div className="mt-3 flex items-center justify-end">
                 <span className="text-xs opacity-70">Tap to enquire</span>
               </div>
             </div>
@@ -436,6 +458,26 @@ function Availability() {
               </div>
               <p className="mt-1 text-white/70 text-xs">Level 3 • Interior 115 m² • Balcony 9 m²</p>
               <p className="mt-1 text-white/70 text-xs italic">Note: This apartment is not furnished. One parking bay included.</p>
+              <div className="mt-3 flex items-center justify-between">
+                <span className="text-[#C9A968] text-sm">Photos rotate automatically</span>
+                <span className="text-xs opacity-70">Tap to enquire</span>
+              </div>
+            </div>
+          </Link>
+
+          <Link to="/contact" className="group rounded-2xl border border-white/10 overflow-hidden bg-white/5 hover:border-[#C9A968]/50 transition">
+            <div className="aspect-[4/3] w-full overflow-hidden">
+              <Img {...b10Images[b10Slide]} className="w-full h-full object-cover group-hover:scale-[1.02] transition" />
+            </div>
+            <div className="p-4">
+              <div className="flex items-start justify-between gap-2">
+                <h2 className="font-serif text-xl">Unit B10 — 2 Bedroom</h2>
+                <div className="flex gap-2">
+                  <span className="text-[10px] px-2 py-1 rounded-full border border-white/15">Furnished</span>
+                </div>
+              </div>
+              <p className="mt-1 text-white/70 text-xs">Ground floor • Interior 118 m² • Exterior 82 m²</p>
+              <p className="mt-1 text-white/70 text-xs">12-month lease, or a corporate stay of 1 to 6 months. One parking bay included.</p>
               <div className="mt-3 flex items-center justify-between">
                 <span className="text-[#C9A968] text-sm">Photos rotate automatically</span>
                 <span className="text-xs opacity-70">Tap to enquire</span>
