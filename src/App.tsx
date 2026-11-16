@@ -1,6 +1,6 @@
 import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, NavLink, useLocation } from 'react-router-dom';
-import { MapPin, Phone, Mail, X, Menu, Check, Facebook, Instagram } from 'lucide-react';
+import { MapPin, Phone, Mail, X, Menu, Check, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 const SITE = 'https://www.theiconyc.co.za';
 const PHONE_DISPLAY = '+27 61 017 9093';
@@ -9,6 +9,7 @@ const EMAIL = 'info@theiconyc.co.za';
 const WHATSAPP = 'https://wa.me/27610179093';
 const FACEBOOK = 'https://www.facebook.com/iconycsa';
 const INSTAGRAM = 'https://www.instagram.com/iconyc.apartments/';
+const LINKEDIN = 'https://www.linkedin.com/company/theiconyc/';
 const ADDRESS = '32 Cloverdene Rd, Rynfield, Benoni';
 
 const pages = {
@@ -253,6 +254,15 @@ function Footer() {
               className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[#C9A968]/50 text-[#C9A968] transition hover:bg-[#C9A968] hover:text-[#0B1220]"
             >
               <Instagram size={16} aria-hidden="true" />
+            </a>
+            <a
+              href={LINKEDIN}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="ICONYC on LinkedIn"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[#C9A968]/50 text-[#C9A968] transition hover:bg-[#C9A968] hover:text-[#0B1220]"
+            >
+              <Linkedin size={16} aria-hidden="true" />
             </a>
           </div>
         </div>
