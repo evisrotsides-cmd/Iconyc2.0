@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, NavLink, useLocation } from 'react-router-dom';
 import { MapPin, Phone, Mail, X, Menu, Check, Facebook, Instagram, Linkedin } from 'lucide-react';
 
@@ -12,47 +12,47 @@ const INSTAGRAM = 'https://www.instagram.com/iconyc.apartments/';
 const LINKEDIN = 'https://www.linkedin.com/company/theiconyc/';
 const ADDRESS = '32 Cloverdene Rd, Rynfield, Benoni';
 
-const pages = {
+export const pages = {
   home: {
-    title: 'ICONYC | Luxury Apartments & Corporate Stays in Benoni',
+    title: 'Apartment Rental on the East Rand | ICONYC',
     description:
-      'Furnished 2-bedroom apartments for corporate stays of 1 to 6 months in Rynfield, Benoni, overlooking Ebotse Links and CR Swart Dam. From R32 000 a month.',
+      '2-bedroom apartment rentals in Rynfield, Benoni, on the East Rand (Ekurhuleni). Furnished corporate stays close to OR Tambo International Airport.',
     path: '/',
   },
   living: {
-    title: 'ICONYC Living | Luxury Residences in Rynfield, Benoni',
+    title: 'ICONYC Living | 2-Bedroom Homes, Benoni',
     description:
-      'Contemporary 2-bedroom ICONYC residences with a New York signature above Ebotse Golf & Country Estate in Rynfield, Benoni, with views over CR Swart Dam.',
+      'Contemporary 2-bedroom homes in Rynfield, Benoni, on the East Rand in Ekurhuleni, close to OR Tambo International Airport and above Ebotse Links.',
     path: '/living',
   },
   corporate: {
-    title: 'ICONYC Corporate Stays | Furnished Apartments in Benoni',
+    title: 'Corporate Apartments near OR Tambo | ICONYC',
     description:
-      'Four fully furnished 2-bedroom ICONYC apartments for corporate stays of 1 to 6 months in Benoni. From R32 000 single or R38 000 double per month. Electricity, water and Wi-Fi included.',
+      'Furnished corporate apartments in Rynfield, Benoni, on the East Rand (Ekurhuleni), close to OR Tambo International Airport. Stays of 1 to 6 months.',
     path: '/corporate-stays',
   },
   availability: {
-    title: 'ICONYC Availability | Apartments for Rent in Benoni',
+    title: 'Apartments for Rent in Benoni | ICONYC',
     description:
-      '2-bedroom ICONYC apartments to rent in Benoni. A furnished home is a 12-month lease, or a corporate stay of 1 to 6 months from R32 000 single / R38 000 double per month.',
+      '2-bedroom apartments for rent in Rynfield, Benoni, on the East Rand. Furnished leases and corporate stays close to OR Tambo International Airport.',
     path: '/availability',
   },
   lifestyle: {
-    title: 'ICONYC Lifestyle | Pool, Gym and Ebotse Links Views',
+    title: 'ICONYC Lifestyle | Pool and Gym, Benoni',
     description:
-      'Pool, gym, beach volleyball and parkland at ICONYC’s 2-bedroom residences in Rynfield, Benoni, with fibre internet, 24-hour security and views over Ebotse Links.',
+      'Pool, gym and beach volleyball at ICONYC in Rynfield, Benoni, on the East Rand, close to OR Tambo International Airport, overlooking Ebotse Links.',
     path: '/lifestyle',
   },
   gallery: {
-    title: 'ICONYC Gallery | Residences Overlooking Ebotse Links',
+    title: 'ICONYC Gallery | Residences in Benoni',
     description:
-      'Photographs of ICONYC’s 2-bedroom residences and the estate in Rynfield, Benoni, overlooking the Ebotse Links golf course and CR Swart Dam.',
+      'Photographs of 2-bedroom ICONYC residences in Rynfield, Benoni, on the East Rand, overlooking Ebotse Links and close to OR Tambo International Airport.',
     path: '/gallery',
   },
   contact: {
-    title: 'ICONYC Contact | Enquire About a Stay in Benoni',
+    title: 'Contact ICONYC | Benoni, East Rand',
     description:
-      'Contact ICONYC at 32 Cloverdene Rd, Rynfield, Benoni. Email info@theiconyc.co.za or call +27 61 017 9093 about a viewing or corporate stay.',
+      'Contact ICONYC at 32 Cloverdene Rd, Rynfield, Benoni, on the East Rand in Ekurhuleni, close to OR Tambo International Airport. Call +27 61 017 9093.',
     path: '/contact',
   },
 } as const;
@@ -75,7 +75,7 @@ function upsertMeta(attr: 'name' | 'property', key: string, content: string) {
 }
 
 function usePageMeta({ title, description, path }: PageMeta) {
-  useLayoutEffect(() => {
+  useEffect(() => {
     document.title = title;
     upsertMeta('name', 'description', description);
     upsertMeta('property', 'og:title', title);
@@ -121,7 +121,6 @@ function Img({
       className={className}
       loading={priority || eager ? 'eager' : 'lazy'}
       decoding="async"
-      fetchPriority={priority ? 'high' : 'auto'}
     />
   );
 }
@@ -341,7 +340,7 @@ function Welcome() {
           New York–inspired residences above Ebotse Links
         </h1>
         <p className="mt-4 max-w-2xl text-pretty text-base leading-relaxed text-white/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)] md:text-lg">
-          Fully furnished 2-bedroom apartments for corporate stays of 1 to 6 months, overlooking the golf course and CR Swart Dam. Housekeeping, electricity, water and high-speed Wi-Fi included.
+          Fully furnished 2-bedroom apartments for corporate stays of 1 to 6 months in Rynfield, Benoni, on the East Rand, overlooking the golf course and CR Swart Dam. Close to OR Tambo International Airport. Housekeeping, electricity, water and high-speed Wi-Fi included.
         </p>
         <div className="mt-8 flex w-full flex-col items-stretch justify-center gap-3 sm:w-auto sm:flex-row">
           <GoldButton href="/corporate-stays">Enquire about a corporate stay</GoldButton>
@@ -372,6 +371,7 @@ function Living() {
 
       <h2 className="text-[#C9A968] text-xl mt-10 mb-4 font-semibold">A Location Reserved for the Few</h2>
       <p className="text-white/80 leading-relaxed mb-6">Perfectly positioned above the lush landscapes of the prestigious Ebotse Golf & Country Estate, ICONYC enjoys one of the most celebrated sunset views in Johannesburg. Here, evenings unfold in hues of gold and rose across the water, framed by sculpted greens and skyline silhouettes — a setting that feels more private resort than metropolitan address.</p>
+      <p className="text-white/80 leading-relaxed mb-6">ICONYC is in Rynfield, Benoni, on the East Rand in Ekurhuleni, close to OR Tambo International Airport.</p>
 
       <p className="text-white/80 leading-relaxed mb-6">It is a vantage point few will ever own — and even fewer will ever experience.</p>
 
@@ -444,7 +444,7 @@ function Availability() {
     <section className="mx-auto max-w-7xl px-4 md:px-6 py-16">
       <h1 className="font-serif text-5xl mb-8 text-center">Current Availability</h1>
 
-      <p className="text-white/80 leading-relaxed mb-6">The apartments available now are 2-bedroom. Semi-furnished and unfurnished rentals are listed below. A furnished apartment is rented on a 12-month lease, or for 1 to 6 months as a corporate stay. A furnished unit rented for less than 12 months becomes a corporate stay, and electricity, water and Wi-Fi are included in that monthly rate. One parking bay is included with every rental.</p>
+      <p className="text-white/80 leading-relaxed mb-6">The apartments available now are 2-bedroom homes in Rynfield, Benoni, on the East Rand, close to OR Tambo International Airport. Semi-furnished and unfurnished rentals are listed below. A furnished apartment is rented on a 12-month lease, or for 1 to 6 months as a corporate stay. A furnished unit rented for less than 12 months becomes a corporate stay, and electricity, water and Wi-Fi are included in that monthly rate. One parking bay is included with every rental.</p>
 
       <div className="mb-10">
         <p className="uppercase tracking-[0.25em] text-xs text-[#C9A968] mb-3">Available now</p>
@@ -566,8 +566,8 @@ function Availability() {
               ['TV / Entertainment','❌ Not included','❌ Not included','✔️ Included'],
               ['Internet','❌ Not included','❌ Not included','✔️ High-speed Wi-Fi'],
               ['Utilities','✔️ Included','✔️ Included','✔️ Electricity, water and Wi-Fi included'],
-              ['Bedding & Linens','❌ Not included','❌ Not included','✔️ Included & changed weekly'],
-              ['Housekeeping','❌ Not included','❌ Not included','✔️ Weekly'],
+              ['Bedding & Linens','❌ Not included','❌ Not included','✔️ Included & changed regularly'],
+              ['Housekeeping','❌ Not included','❌ Not included','✔️ Regular'],
               ['Ready to Move In?','❌ Not fully','✔️ Yes','✔️ Yes — hotel-style setup'],
               ['Parking','✔️ One bay included','✔️ One bay included','✔️ One bay included'],
             ].map((row, i) => (
@@ -603,7 +603,7 @@ function Lifestyle() {
       <p className="text-white/80 leading-relaxed mb-6">At ICONYC, lifestyle is not an accessory — it is the essence of living here. Your home should elevate every moment of your day: a place that awakens you with energy in the morning and welcomes you back with serenity at night. From day one, ICONYC was imagined as a refined sanctuary — a modern retreat where contemporary architecture, nature, and wellbeing are perfectly aligned.</p>
 
       <h2 className="text-[#C9A968] text-xl mt-10 mb-4 font-semibold">AN UNMATCHED SETTING</h2>
-      <p className="text-white/80 leading-relaxed mb-6">ICONYC enjoys one of the most exclusive views in Gauteng, overlooking the 17th and 18th holes of the world-class Ebotse Links Golf Course, set against the calming waters of the CR Swart Dam. Every balcony becomes a front-row seat to layered landscapes, golden sunsets, and uninterrupted open space.</p>
+      <p className="text-white/80 leading-relaxed mb-6">ICONYC enjoys one of the most exclusive views in Gauteng, overlooking the 17th and 18th holes of the world-class Ebotse Links Golf Course, set against the calming waters of the CR Swart Dam. Every balcony becomes a front-row seat to layered landscapes, golden sunsets, and uninterrupted open space. The estate is in Rynfield, Benoni, on the East Rand in Ekurhuleni, close to OR Tambo International Airport.</p>
 
       <h2 className="text-[#C9A968] text-xl mt-10 mb-4 font-semibold">24-HOUR SECURITY & ACCESS CONTROL</h2>
       <p className="text-white/80 leading-relaxed mb-6">Security is designed, not added. ICONYC is enclosed by a reinforced concrete perimeter wall with electric fencing, controlled single-access entry, biometric guest registration, fingerprint access for residents, heat-sensitive surveillance cameras, and 24-hour off-site monitoring. Privacy and peace of mind are a permanent feature.</p>
@@ -669,7 +669,8 @@ function Gallery() {
   const [selected, setSelected] = useState<GalleryImage | null>(null);
   return (
     <section className="mx-auto max-w-7xl px-4 md:px-6 py-16">
-      <h1 className="font-serif text-5xl mb-10 text-center">Gallery</h1>
+      <h1 className="font-serif text-5xl mb-4 text-center">Gallery</h1>
+      <p className="mb-10 text-center text-white/70">2-bedroom residences in Rynfield, Benoni, on the East Rand, close to OR Tambo International Airport.</p>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
         {galleryImages.map((image) => (
           <button key={image.src} className="overflow-hidden rounded-2xl border border-white/10 shadow-lg hover:scale-[1.02] transition" onClick={() => setSelected(image)}>
@@ -696,7 +697,8 @@ function Contact() {
   return (
     <section className="text-white">
       <div className="mx-auto max-w-5xl px-4 py-16">
-        <h1 className="font-serif text-5xl mb-8 text-center text-[#C9A968]">Contact Us</h1>
+        <h1 className="font-serif text-5xl mb-4 text-center text-[#C9A968]">Contact Us</h1>
+        <p className="mb-8 text-center text-white/70">32 Cloverdene Rd, Rynfield, Benoni, on the East Rand in Ekurhuleni, close to OR Tambo International Airport.</p>
 
         <div className="mb-10 rounded-xl overflow-hidden border border-[#C9A968]/30 shadow-lg">
           <iframe
@@ -743,7 +745,7 @@ function Contact() {
 
 const included = [
   'Fully furnished 2-bedroom apartment',
-  'Weekly housekeeping',
+  'Regular housekeeping',
   '24/7 maintenance',
   'Electricity, water and Wi-Fi included in the monthly rate',
   'Smart TVs',
@@ -780,7 +782,7 @@ const faqs = [
   },
   {
     q: 'What is included?',
-    a: 'A fully furnished 2-bedroom apartment, weekly housekeeping, 24/7 maintenance and smart TVs. Electricity, water and Wi-Fi are included in the monthly rate, and corporate tenants do not pay for them. One parking bay is included. Residents can use the swimming pool, beach volleyball court, gym and large park. There are no hidden fees.',
+    a: 'A fully furnished 2-bedroom apartment, regular housekeeping, 24/7 maintenance and smart TVs. Electricity, water and Wi-Fi are included in the monthly rate, and corporate tenants do not pay for them. One parking bay is included. Residents can use the swimming pool, beach volleyball court, gym and large park. There are no hidden fees.',
   },
   {
     q: 'Are there hidden fees?',
@@ -816,7 +818,7 @@ function CorporateStays() {
 
       <section className="mx-auto max-w-3xl px-4 py-16 md:px-6">
         <p className="text-lg leading-relaxed text-white/85">
-          Contemporary residences with a New York signature, overlooking Ebotse Links and CR Swart Dam in Rynfield, Benoni. ICONYC’s homes are 2-bedroom. A furnished apartment can be rented on a 12-month lease, or for one to six months as a corporate stay. A furnished unit rented for less than 12 months becomes a corporate stay: a private, calm home base for specialists, project teams, visiting clinicians and relocating staff working on the East Rand. Electricity, water and Wi-Fi are included in the monthly rate, and corporate tenants do not pay for them. One parking bay is included with every rental.
+          Contemporary residences with a New York signature, overlooking Ebotse Links and CR Swart Dam in Rynfield, Benoni, on the East Rand in Ekurhuleni. ICONYC is close to OR Tambo International Airport. ICONYC’s homes are 2-bedroom. A furnished apartment can be rented on a 12-month lease, or for one to six months as a corporate stay. A furnished unit rented for less than 12 months becomes a corporate stay: a private, calm home base for specialists, project teams, visiting clinicians and relocating staff working on the East Rand. Electricity, water and Wi-Fi are included in the monthly rate, and corporate tenants do not pay for them. One parking bay is included with every rental. Regular housekeeping is included.
         </p>
       </section>
 
@@ -874,7 +876,7 @@ function CorporateStays() {
               </tbody>
             </table>
           </div>
-          <p className="mt-4 text-sm text-white/70">Electricity, water and Wi-Fi are included in the monthly rate. Corporate tenants do not pay for them. Weekly housekeeping and one parking bay are included. Terms and conditions apply.</p>
+          <p className="mt-4 text-sm text-white/70">Electricity, water and Wi-Fi are included in the monthly rate. Corporate tenants do not pay for them. Regular housekeeping and one parking bay are included. Terms and conditions apply.</p>
         </div>
       </section>
 
@@ -927,9 +929,9 @@ function CorporateStays() {
   );
 }
 
-export default function App() {
+export function AppContent() {
   return (
-    <Router>
+    <>
       <ScrollToTop />
       <Shell>
         <Routes>
@@ -942,6 +944,14 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Shell>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 }
